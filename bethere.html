@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#header {
+			width: 10%;
+			height: 50px;
+			float: left;
+			background-color: #EAE1D7;
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		.title {
+			font-family: "a다정다감", "휴먼엑스포", sans-serif;
+			text-decoration: none;
+			color: #585062;
+		}
+
+		#menubar {
+			width: 87%;
+			height: 50px;
+			float: right;
+			background-color: #D8EEE7;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			z-index: -1;
+		}
+
+		.catTable {
+			margin-top: 0px;
+			height: 50px; /*노필요? 보더 제대로 맞춘거임 없으면 천장으로 나옴*/
+		}
+
+		.catElem {
+			float: left; /* 카테고리 가로로 배치 */
+			width: 150px; /* 카테고리, 서브카테고리 너비 고정 */
+			text-align: center;
+			font-family: "a다정다감", "휴먼엑스포", sans-serif;
+		}
+
+		#menubar ul {
+			list-style: none; /* 리스트 마커 없애줌 */
+			background-color: #D8EEE7;
+			padding: 0px;
+		}
+
+		#menubar li a {
+			color: #585062; /* 카테고리, 서브카테고리 글씨 색깔 */
+			line-height: 50px; /* 카테고리, 서브카테고리 줄간격 */
+			text-decoration: none; /* 카테고리, 서브카테고리 밑줄 없앰 */
+		}
+
+		#menubar li a:hover, #menubar ul li:hover {
+			background-color: #8BD0B4; /* 마우스 올렸을 때 색깔 바꾸기 */
+		}
+
+		.catElem ul {
+			display: none; /* 평소에 서브카테고리 테이블 숨기기 */
+			position: fixed;
+			width: 150px;
+		}
+
+		.catElem:hover ul { 
+			display: block; /* 마우스를 올리면 서브카테고리 테이블 펼치기 */
+		}
+
+		#content {
+			width: 100%;
+			/*높이는 안에있는거 채우는 만큼 알아서 설정되는 듯*/
+			clear: both;
+			font-family: "a다정다감", "휴먼엑스포", sans-serif;
+		}
+
+		.video {
+			margin-left: auto; /* 이미지 중앙 정렬 */
+			margin-right: auto; /* 이미지 중앙 정렬 */
+			display: block; /* 이미지 중앙 정렬 */
+			margin-bottom: 20px;
+		}
+
+		.paragraph {
+			width: 85%;
+			margin: 0 auto; /* div 가운데 정렬 */
+			padding: 20px;
+			line-height: 30px; /* 줄간격 */
+			color: #585062;
+		}
+
+		.actoranim {
+			width: 250px;
+			height: 250px;
+			position: relative;
+			animation: 7s myanim;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes myanim {
+			0%		{top: 0px; left: 10%; background-image: url("kimy.png"); border-radius: 250px;}
+			16.6%	{top: 0px; left: 30%; background-image: url("byun.png"); border-radius: 0px;}
+			33.3%	{top: 0px; left: 50%; background-image: url("chae.png"); border-radius: 250px;}
+			49.9%	{top: 0px; left: 70%; background-image: url("kims.png"); border-radius: 0px;}
+			66.6%	{top: 0px; left: 50%; background-image: url("ahn.png"); border-radius: 250px;}
+			83.3%	{top: 0px; left: 30%; background-image: url("park.png"); border-radius: 0px;}
+			100%	{top: 0px; left: 10%; background-image: url("kimy.png"); border-radius: 250px;}
+		}
+
+		.table {
+			border: 1px solid #585062;
+			border-collapse: collapse;
+			margin-left: auto; /* 테이블 가운데 정렬 */
+			margin-right: auto; /* 테이블 가운데 정렬 */
+			margin-bottom: 30px;
+			width: 90%;
+		}
+
+		.table th {
+			background-color: #FFBF89;
+		}
+
+		.table td {
+			border: 1px dotted #585062;
+		}
+
+		.tds {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<a class="title" href="./index.html">subin's<br>favorites</a>
+	</div>
+	<div id="menubar">
+		<ul class="catTable">
+			<li class="catElem"><a href="./nafla.html">Music</a>
+				<ul>
+					<li><a href="./nafla.html">나플라</a></li>
+					<li><a href="./akmu.html">악동뮤지션</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./abouttime.html">Movie</a>
+				<ul>
+					<li><a href="./abouttime.html">어바웃타임</a></li>
+					<li><a href="./bethere.html">당신, 거기 있어줄래요?</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./answer1988.html">Drama</a>
+				<ul>
+					<li><a href="answer1988.html">응답하라 1988</a></li>
+					<li><a href="youthsage.html">청춘시대</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="content">
+		<iframe class="video" width="60%" height="470" src="https://www.youtube.com/embed/E7U35rZzkg4" frameborder="0" allowfullscreen></iframe>
+		<h2 style="text-align: center;">
+		<span style="color: #685F74">당 </span>
+		<span style="color: #8BD0B4">신 </span>
+		<span style="color: #DD4B4F">,  </span>
+		<span style="color: #FFBF89">거 </span>
+		<span style="color: #EAE1D7">기  </span>
+		<span style="color: #685F74">있 </span>
+		<span style="color: #8BD0B4">어 </span>
+		<span style="color: #DD4B4F">줄 </span>
+		<span style="color: #FFBF89">래 </span>
+		<span style="color: #EAE1D7">요 </span>
+		<span style="color: #685F74">? </span>
+		<span style="color: #585062;">Trailer</span>
+		</h2>	
+
+		<div class="paragraph">
+			<h2 style="color: #FFBF89;">Synopsis</h2>
+			<b>인생을 뒤바꾼 기적 같은 10번의 기회<br>“넌 30년 전의 나고, 난 30년 후의 너야”<br><br></b>
+			2015년 현재<br>“간절히 바라는 소원이 있습니까?”<br>
+ 			현재의 수현(김윤석)은 의료 봉사 활동 중 한 소녀의 생명을 구하고<br>
+ 			소녀의 할아버지로부터 신비로운 10개의 알약을 답례로 받는다.<br>
+ 			호기심에 알약을 삼킨 수현은 순간 잠에 빠져들고<br>
+ 			다시 눈을 떴을 때, 30년 전 과거의 자신과 마주하게 된다.<br>
+ 			1985년 과거<br>
+ 			<b>“분명 모르는 사람인데... 이상하게 낯이 익었어”<br></b>
+ 			오래된 연인 연아(채서진)와 행복한 나날을 보내던 과거의 수현(변요한)은<br>
+ 			우연히 길에 쓰러진 남자를 돕게 된다.<br>
+ 			남자는 본인이 30년 후의 수현이라 주장하고<br>
+ 			황당해하던 과거의 수현은 그가 내미는 증거들을 보고 점차 혼란에 빠진다.<br>
+ 			<b>“과거는 되돌릴 수 없어. 지금 이 순간 역시, 되돌릴 수 없는 시간이고.”<br>
+ 			“당신에겐 과거지만 나한텐 미래에요. 그 미랜 내가 정하는 거고!”<br></b>
+ 			사랑했던 연아를 꼭 한 번 보고 싶었다는 현재 수현의 말에<br>
+ 			과거 수현은 알 수 없는 불안감을 느끼고<br>
+ 			이어 믿기 힘든 미래에 대해 알게 되는데…<br>
+ 			그 때로 돌아간다면… 지금의 내 인생도 바뀔 수 있을까요?<br>
+		</div>
+
+		<div class="paragraph">
+			<h2 style="color: #FFBF89;">Actors</h2>
+			<div class="actoranim"></div>
+			(애니메이션 차례대로)<br>
+			<dl>
+				<dt>김윤석</dt>
+				<dd>주연, 수현 역</dd>
+				<dt>변요한</dt>
+				<dd>주연, 젊은 수현 역</dd>
+				<dt>채서진</dt>
+				<dd>주연, 젊은 연아 역</dd>
+				<dt>김상호</dt>
+				<dd>조연, 태호 역</dd>
+				<dt>안세하</dt>
+				<dd>조연, 젊은 태호 역</dd>
+				<dt>박혜수</dt>
+				<dd>조연, 수아 역</dd>
+			</dl>
+		</div>
+
+		<div class="paragraph">
+			<h2 style="color: #FFBF89;">Comments</h2>
+			<table class="table">
+				<caption style="font-size: 18pt; text-shadow: 2px 2px #bfb9c6; margin-bottom: 10px;">Best Comments in Watcha Play</caption>
+				<tr>
+					<th>별점</th>
+					<th>리뷰</th>
+					<th>공감</th>
+				</tr>
+				<tr>
+					<td>★★☆☆☆</td>
+					<td class="tds">개성과 매력을 발견하기 어려울 정도로 그저 흘러간다. (이동진 평론가)</td>
+					<td>
+						<form style="text-align: center;">
+							<button type="button" onclick="alert('이 리뷰에 공감하셨습니다!')" value="LIKE!"> <img src="./hearticon.png" width=25px height=25px></button>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>★★★☆☆</td>
+					<td class="tds">"삶은 당신이 잠들지 못할 때 벌어지는 일입니다."(캄보디아 노인 역) 잠들지 못할 만큼 미련이 남는다면 '오늘' 직면해야 한다. 끝내 외면하면 평생의 후회로 남으니까. (ID 조씨)</td>
+					<td>
+						<form style="text-align: center;">
+							<button type="button" onclick="alert('이 리뷰에 공감하셨습니다!')" value="LIKE!"> <img src="./hearticon.png" width=25px height=25px></button>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>★★★★☆</td>
+					<td class="tds">1985년의 수현과 2015년의 수현이 서로 지키고자 했던 존재가 같고도 다르기에 더 간절했음을. 스토리텔링이 어마어마하다. 기욤 뮈소의 상상력과 감각적인 연출이 만나 아름다운영화 한 편이 탄생했다. (ID 심혜진)</td>
+					<td>
+						<form style="text-align: center;">
+							<button type="button" onclick="alert('이 리뷰에 공감하셨습니다!')" value="LIKE!"> <img src="./hearticon.png" width=25px height=25px></button>
+						</form>
+					</td>
+				</tr>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>
