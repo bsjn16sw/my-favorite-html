@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&amp;subset=korean" rel="stylesheet">
+	<title>Subin's favorites</title>
+	<style>
+		#header {
+			width: 10%;
+			height: 50px;
+			float: left;
+			background-color: #EAE1D7;
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		.title {
+			font-family: "Nanum Myeongjo", sans-serif;
+			text-decoration: none;
+			color: #585062;
+		}
+
+		#menubar {
+			width: 87%;
+			height: 50px;
+			float: right;
+			background-color: #D8EEE7;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			z-index: -1;
+		}
+
+		.catTable {
+			margin-top: 0px;
+			height: 50px; /*노필요? 보더 제대로 맞춘거임 없으면 천장으로 나옴*/
+		}
+
+		.catElem {
+			float: left; /* 카테고리 가로로 배치 */
+			width: 180px; /* 카테고리, 서브카테고리 너비 고정 */
+			text-align: center;
+			font-family: "Nanum Myeongjo", sans-serif;
+		}
+
+		#menubar ul {
+			list-style: none; /* 리스트 마커 없애줌 */
+			background-color: #D8EEE7;
+			padding: 0px;
+		}
+
+		#menubar li a {
+			color: #585062; /* 카테고리, 서브카테고리 글씨 색깔 */
+			line-height: 50px; /* 카테고리, 서브카테고리 줄간격 */
+			text-decoration: none; /* 카테고리, 서브카테고리 밑줄 없앰 */
+		}
+
+		#menubar li a:hover, #menubar ul li:hover {
+			background-color: #8BD0B4; /* 마우스 올렸을 때 색깔 바꾸기 */
+		}
+
+		.catElem ul {
+			display: none; /* 평소에 서브카테고리 테이블 숨기기 */
+			position: fixed;
+			width: 180px;
+		}
+
+		.catElem:hover ul { 
+			display: block; /* 마우스를 올리면 서브카테고리 테이블 펼치기 */
+		}
+
+		#content {
+			width: 100%;
+			/*높이는 안에있는거 채우는 만큼 알아서 설정되는 듯*/
+			clear: both;
+			font-family: "Nanum Myeongjo", sans-serif;
+		}
+
+		#footer {
+			margin-top: 10px;
+			background-color: #EAE1D7;
+			font-family: "Nanum Myeongjo", sans-serif;
+			text-align: right;
+			padding-right: 20px;
+			color: #585062;
+		}
+
+
+		.image {
+			width: 35%;
+			margin-left: auto; /* 이미지 중앙 정렬 */
+			margin-right: auto; /* 이미지 중앙 정렬 */
+			display: block; /* 이미지 중앙 정렬 */
+		}
+
+		.intro {
+			width: 70%;
+			margin: 0 auto; /* div 가운데 정렬 */
+			padding: 20px;
+			line-height: 30px; /* 줄간격 */
+			text-indent: 3%; /* 들여쓰기 */
+			color: #585062;
+		}
+
+		.playlist {
+			width: 90%;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.youtube {
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-bottom: 50px;
+		}
+
+		.lyrics {
+			width: 48%;
+			height: 300px;
+			float: right;
+			padding-right: 10px;
+			overflow: auto;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<a class="title" href="./index.html">Subin's<br>favorites</a>
+	</div>
+	<div id="menubar">
+		<ul class="catTable">
+			<li class="catElem"><a href="./nafla.html">Music</a>
+				<ul>
+					<li><a href="./nafla.html">나플라</a></li>
+					<li><a href="./akmu.html">악동뮤지션</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./abouttime.html">Movie</a>
+				<ul>
+					<li><a href="./abouttime.html">어바웃타임</a></li>
+					<li><a href="./bethere.html">당신, 거기 있어줄래요?</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./answer1988.html">Drama</a>
+				<ul>
+					<li><a href="./answer1988.html">응답하라 1988</a></li>
+					<li><a href="./youthsage.html">청춘시대</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="content">
+		<a href="http://www.ygfamily.com/artist/About.asp?LANGDIV=K&ATYPE=&ARTIDX=52" target="_blank">
+			<img class="image" src="./src/akmu.png">
+		</a>
+		<h2 style="text-align: center;">
+		<span style="color: #685F74">악 </span>
+		<span style="color: #8BD0B4">동 </span>
+		<span style="color: #DD4B4F">뮤 </span>
+		<span style="color: #FFBF89">지 </span>
+		<span style="color: #EAE1D7">션 </span>
+		</h2>
+
+		<div class="intro">
+			악동뮤지션은 오빠 이찬혁과 여동생 이수현 친남매로 이루어진 <b>남매 혼성 듀오</b>이다. YG 엔터테인먼트 소속이다. 2012년 초부터 인터넷에 자작곡과 커버곡 영상을 올리면서 인지도를 쌓았고, 2013년 <b>K-POP 스타 시즌 2에 출연해 우승</b>하였다. K-POP 스타 심사위원이었던 박진영은 "이게 싱어송라이터고요, 이게 바로 듀엣입니다!" 라며 극찬한 바 있다. 악동뮤지션이 부른 대부분의 곡들은 이찬혁이 작사 작곡하였다. 이렇게 만든 자작곡을 이수현의 청량하면서도 귀를 사로잡는 보컬이 완성해낸다. 또한 이 둘은 흔하지 않은 연예계 친남매로서 <b>'현실 남매'</b>라는 단어를 대중화시켰다. 예능에서 눈치볼 것 없이 서로를 디스하면서도 함께 노래를 부르는 모습은 정말 사랑스럽다. 현재는 오빠 이찬혁이 2017년 입대하면서 공백기를 가지고 있다. 사진을 클릭해 공식 사이트로 이동할 수 있다.
+		</div>
+
+		<div class=playlist>
+			<h2 style="color: #FFBF89;">My Playlist</h2>
+			<h3 style="color: #FFBF89; text-align: center;">AKMU - 얼음들 (2014)</h3>
+			<div class="youtube">
+				<iframe width="50%" height="300" src="https://www.youtube.com/embed/sUCIzn0mRHc" frameborder="0" allowfullscreen></iframe>
+				<div class="lyrics">
+					붉은 해가 세수하던<br>파란 바다 검게 물들고<br>구름 비바람 오가던<br>하얀 하늘 회색 빛들고<br>맘속에 찾아온 어둠을 그대로 두고<br>
+					밤을 덮은 차가운<br>그림자마냥 굳어간다<br><span style="background-color: #EAE1D7">얼음들이 녹아지면<br>
+					조금 더 따뜻한 노래가 나올텐데<br>얼음들은 왜 그렇게 차가울까<br>
+					차가울까요<br>Why are they so cold<br>Why are they so cold<br></span>붉은 해가 세수하던 파란 바다<br>그 깊이 묻힌 옛 온기를 바라본다<br>
+					too late get it out<br>어른들 세상 추위도 풀렸으면 해<br>얼었던 사랑이 이젠<br>주위로 흘렀으면 해<br>맘속에 찾아온 어둠을 그대로 두고<br>
+					밤을 덮은 차가운 <br>그림자마냥 굳어간다<br><span style="background-color: #EAE1D7">얼음들이 녹아지면<br>
+					조금 더 따뜻한 노래가 나올텐데<br>얼음들은 왜 그렇게 차가울까<br>
+					차가울까요<br>얼음들이 녹아지면<br>조금 더 따뜻한 노래가 나올텐데<br>얼음들은 왜 그렇게 차가울까<br>차가울까요<br>Why are they so cold<br>
+					Why are they so cold<br></span>
+				</div>
+			</div>
+
+			<h3 style="color: #FFBF89; text-align: center;">AKMU - 그때 그 아이들은 (2017)</h3>
+			<div class="youtube">
+				<iframe width="50%" height="300" src="https://www.youtube.com/embed/T-v9pmhHbic" frameborder="0" allowfullscreen></iframe>
+				<div class="lyrics">
+					지친 꿈을 이끌고 계속 걷다 보니<br>첫발을 함께 떼어 달려왔던 <br>친구들이 곁에 없다는 걸 <br>어느 순간 깨닫게 되지<br>
+					함께 이뤄갈까 성공해 다시 보자 <br>지금쯤 현실의 처음을 겪고 있다면<br>그때완 다른 웃음 짓고 있으려나<br>
+					<span style="background-color: #EAE1D7">그땐 함께 영원할 것만 같았지<br>어렸던 세상을 걷어내면<br>비탈지던 저 좁은 길가로 흩어져<br>
+					화려하고 순수했던 꿈 <br>너의 두 손에 넘쳐 흘렀던 그 한 움큼은<br>꼭 쥐고 살아가길<br></span>
+					나로 시작될 거야 하늘을 날아보자<br>지금쯤 턱 막힌 장벽에 날개를 숨긴<br>그때 그 아이들과 우리의 꿈이<br>
+					<span style="background-color: #EAE1D7">그땐 함께 영원할 것만 같았지<br>어렸던 세상을 걷어내면 <br>비탈지던 저 좁은 길가로 흩어져<br>
+					화려하고 순수했던 꿈<br>너의 두 손에 넘쳐 흘렀던 그 한 움큼과<br>그 두 손 모아 기도했던 시간이 <br>이루어질 수 있도록<br></span>
+					<span style="background-color: #EAE1D7">그땐 함께 이룰 거라고 믿었지<br>작은 손과 발로 서로를 잡고<br>
+					뛰던 세상이 다였던 우리 어린 시절의<br>간절하고 행복했던 꿈<br>너의 두 손에 넘쳐 흘렀던 그 한 움큼은<br>꼭 쥐고 살아가길<br></span>
+					서투른 삶 걸음으로 상처를 입고 <br>새로운 만남에 세상이 낯설어도<br>훗날 모두 이뤄 보일거야<br>내가 알던 그때 그 아이들은<br>
+				</div>
+			</div>	
+		</div>
+
+		<div id="footer">
+			Subin's favorites homepage
+		</div>
+
+</body>
+</html>

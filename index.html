@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&amp;subset=korean" rel="stylesheet">
+	<title>Subin's favorites</title>
+	<style>
+		#header {
+			width: 10%;
+			height: 50px;
+			float: left;
+			background-color: #EAE1D7;
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		.title {
+			font-family: "Nanum Myeongjo", sans-serif;
+			text-decoration: none;
+			color: #585062;
+		}
+
+		#menubar {
+			width: 87%;
+			height: 50px;
+			float: right;
+			background-color: #D8EEE7;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			z-index: -1;
+		}
+
+		.catTable {
+			margin-top: 0px;
+			height: 50px; /*노필요? 보더 제대로 맞춘거임 없으면 천장으로 나옴*/
+		}
+
+		.catElem {
+			float: left; /* 카테고리 가로로 배치 */
+			width: 180px; /* 카테고리, 서브카테고리 너비 고정 */
+			text-align: center;
+			font-family: "Nanum Myeongjo", sans-serif;
+		}
+
+		#menubar ul {
+			list-style: none; /* 리스트 마커 없애줌 */
+			background-color: #D8EEE7;
+			padding: 0px;
+		}
+
+		#menubar li a {
+			color: #585062; /* 카테고리, 서브카테고리 글씨 색깔 */
+			line-height: 50px; /* 카테고리, 서브카테고리 줄간격 */
+			text-decoration: none; /* 카테고리, 서브카테고리 밑줄 없앰 */
+		}
+
+		#menubar li a:hover, #menubar ul li:hover {
+			background-color: #8BD0B4; /* 마우스 올렸을 때 색깔 바꾸기 */
+		}
+
+		.catElem ul {
+			display: none; /* 평소에 서브카테고리 테이블 숨기기 */
+			position: fixed;
+			width: 180px;
+		}
+
+		.catElem:hover ul { 
+			display: block; /* 마우스를 올리면 서브카테고리 테이블 펼치기 */
+		}
+
+		#content {
+			width: 100%;
+			/*높이는 안에있는거 채우는 만큼 알아서 설정되는 듯*/
+			border: 1px dotted #585062;
+			border-radius: 50px;
+			clear: both;
+			font-family: "Nanum Myeongjo", sans-serif;
+		}
+
+		#footer {
+			margin-top: 10px;
+			background-color: #EAE1D7;
+			font-family: "Nanum Myeongjo", sans-serif;
+			text-align: right;
+			padding-right: 20px;
+			color: #585062;
+		}
+
+		.pic {
+			width: 13%;
+			opacity: 0.6;
+		}
+
+		.pic:hover {
+			opacity: 1;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<a class="title" href="./index.html">Subin's<br>favorites</a>
+	</div>
+	<div id="menubar">
+		<ul class="catTable">
+			<li class="catElem"><a href="./nafla.html">Music</a>
+				<ul>
+					<li><a href="./nafla.html">나플라</a></li>
+					<li><a href="./akmu.html">악동뮤지션</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./abouttime.html">Movie</a>
+				<ul>
+					<li><a href="./abouttime.html">어바웃타임</a></li>
+					<li><a href="./bethere.html">당신, 거기 있어줄래요?</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./answer1988.html">Drama</a>
+				<ul>
+					<li><a href="./answer1988.html">응답하라 1988</a></li>
+					<li><a href="./youthsage.html">청춘시대</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="content">
+		<h1 style="text-align: center; color: #585062;">Welcome to my favorites!</h1>
+		<div style="width: 90%; margin: 0 auto;">
+			<a href="./nafla.html">
+				<img class="pic" style="margin-left: 9%;" src="./src/main_nafla.png">
+			</a>
+			<a href="./akmu.html">
+				<img class="pic" src="./src/main_akmu.png">
+			</a>
+			<a href="./abouttime.html">
+				<img class="pic" src="./src/main_abouttime.png">
+			</a>
+			<a href="./bethere.html">
+				<img class="pic" src="./src/main_bethere.png">
+			</a>
+			<a href="./answer1988.html">
+				<img class="pic" src="./src/main_answer1988.png">
+			</a>
+			<a href="./youthsage.html">
+				<img class="pic" src="./src/main_youthsage.png">
+			</a>
+		</div>
+	</div>
+	<div id="footer">
+		Subin's favorites homepage
+	</div>
+
+</body>
+</html>

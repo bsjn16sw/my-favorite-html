@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&amp;subset=korean" rel="stylesheet">
+	<title>Subin's favorites</title>
+	<style>
+		#header {
+			width: 10%;
+			height: 50px;
+			float: left;
+			background-color: #EAE1D7;
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		.title {
+			font-family: "Nanum Myeongjo", sans-serif;
+			text-decoration: none;
+			color: #585062;
+		}
+
+		#menubar {
+			width: 87%;
+			height: 50px;
+			float: right;
+			background-color: #D8EEE7;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			z-index: -1;
+		}
+
+		.catTable {
+			margin-top: 0px;
+			height: 50px; /*노필요? 보더 제대로 맞춘거임 없으면 천장으로 나옴*/
+		}
+
+		.catElem {
+			float: left; /* 카테고리 가로로 배치 */
+			width: 180px; /* 카테고리, 서브카테고리 너비 고정 */
+			text-align: center;
+			font-family: "Nanum Myeongjo", sans-serif;
+		}
+
+		#menubar ul {
+			list-style: none; /* 리스트 마커 없애줌 */
+			background-color: #D8EEE7;
+			padding: 0px;
+		}
+
+		#menubar li a {
+			color: #585062; /* 카테고리, 서브카테고리 글씨 색깔 */
+			line-height: 50px; /* 카테고리, 서브카테고리 줄간격 */
+			text-decoration: none; /* 카테고리, 서브카테고리 밑줄 없앰 */
+		}
+
+		#menubar li a:hover, #menubar ul li:hover {
+			background-color: #8BD0B4; /* 마우스 올렸을 때 색깔 바꾸기 */
+		}
+
+		.catElem ul {
+			display: none; /* 평소에 서브카테고리 테이블 숨기기 */
+			position: fixed;
+			width: 180px;
+		}
+
+		.catElem:hover ul { 
+			display: block; /* 마우스를 올리면 서브카테고리 테이블 펼치기 */
+		}
+
+		#content {
+			width: 100%;
+			/*높이는 안에있는거 채우는 만큼 알아서 설정되는 듯*/
+			clear: both;
+			font-family: "Nanum Myeongjo", sans-serif;
+		}
+
+		#footer {
+			margin-top: 10px;
+			background-color: #EAE1D7;
+			font-family: "Nanum Myeongjo", sans-serif;
+			text-align: right;
+			padding-right: 20px;
+			color: #585062;
+		}
+
+		.image {
+			width: 50%;
+			margin-left: auto; /* 이미지 중앙 정렬 */
+			margin-right: auto; /* 이미지 중앙 정렬 */
+			display: block; /* 이미지 중앙 정렬 */
+			margin-bottom: 20px;
+		}
+
+		.audio {
+			margin-left: auto; /* 이미지 중앙 정렬 */
+			margin-right: auto; /* 이미지 중앙 정렬 */
+			display: block; /* 이미지 중앙 정렬 */
+		}
+
+		.paragraph {
+			width: 85%;
+			margin: 0 auto; /* div 가운데 정렬 */
+			padding: 20px;
+			line-height: 30px; /* 줄간격 */
+			color: #585062;
+		}
+
+		.quiz {
+			padding-left: 20px;
+			margin-bottom: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<a class="title" href="./index.html">Subin's<br>favorites</a>
+	</div>
+	<div id="menubar">
+		<ul class="catTable">
+			<li class="catElem"><a href="./nafla.html">Music</a>
+				<ul>
+					<li><a href="./nafla.html">나플라</a></li>
+					<li><a href="./akmu.html">악동뮤지션</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./abouttime.html">Movie</a>
+				<ul>
+					<li><a href="./abouttime.html">어바웃타임</a></li>
+					<li><a href="./bethere.html">당신, 거기 있어줄래요?</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./answer1988.html">Drama</a>
+				<ul>
+					<li><a href="./answer1988.html">응답하라 1988</a></li>
+					<li><a href="./youthsage.html">청춘시대</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="content">
+		<img class="image" src="./src/answer1988.png">
+		<h2 style="text-align: center;">
+			<span style="color: #685F74">응 </span>
+			<span style="color: #8BD0B4">답 </span>
+			<span style="color: #DD4B4F">하 </span>
+			<span style="color: #FFBF89">라  </span>
+			<span style="color: #EAE1D7">1 </span>
+			<span style="color: #685F74">9 </span>
+			<span style="color: #8BD0B4">8 </span>
+			<span style="color: #DD4B4F">8 </span>
+		</h2>
+		<h3 style="text-align: center; letter-spacing: 5px; color: #585062;">"이 골목은 그대로입니다"</h3>
+		<audio class="audio" src="./src/answer1988.mp3" controls="controls"></audio>
+
+		<div class="paragraph">
+			<h2 style="color: #FFBF89;">등장인물 가계도</h2>
+			<img class="image" src="./src/answer_familytree.png">
+		</div>
+
+		<div class="paragraph">
+			<h2 style="color: #FFBF89;">응답하라 1988 퀴즈 풀어보기</h2>
+			
+			<form action="input.jsp" method="post">
+				<h3>0. 당신은 누구신가요?<br></h3>
+				<div class="quiz">
+					닉네임<input type="text" name="nickname"><br>
+					연령대
+					<select name="job">
+						<option selected>연령대를 선택하세요.</option>
+						<option value="10">10대</option>
+						<option value="20">20대</option>
+						<option value="30">30대</option>
+						<option value="40">40대</option>
+						<option value="50">50대</option>
+						<option value="60">60대</option>
+						<option value="70">그 이상</option>
+					</select><br>
+					시청한 응답하라 시리즈<br>
+					<input type="checkbox" name="answer" value="1997">응답하라 1997<br>
+					<input type="checkbox" name="answer" value="1994">응답하라 1994<br>
+					<input type="checkbox" name="answer" value="1988">응답하라 1988
+				</div>
+
+
+				<h3>1. 5화 내레이션 중 빈칸에 들어갈 알맞은 말은 무엇일까요?<br></h3>
+				<img class="image" src="./src/answer_no1.png">
+				<div class="quiz">
+					가끔은, (&nbsp;&nbsp;&nbsp;)이(가) 부끄러울 때가 있었다. (&nbsp;&nbsp;&nbsp;)에겐 왜 최소한의 체면도, 자존심도 없는지 화가 날 때가 있었다. 그건, 자기 자신보다 더 지키고 싶은 소중한 것이 있기 때문이란 걸, 바로 나 때문이란 걸, 그 땐... 알지 못했다. 정작 사람이 강해지는 건 자존심을 부릴 때가 아닌, 자존심마저 던져버렸을 때다. 그래서, (&nbsp;&nbsp;&nbsp;)은(는) 힘이 세다.<br>
+					<fieldset>
+						<input type="radio" name="no1" value="1">골목 친구들<br>
+						<input type="radio" name="no1" value="2">선생님<br>
+						<input type="radio" name="no1" value="3">엄마
+					</fieldset>
+				</div>
+
+				<h3>2. 7화에서 덕선이는 마니또의 선물로 무엇을 받았을까요? 그것을 선물한 사람은 누구일까요?<br></h3>
+				<img class="image" src="./src/answer_no2.png">
+				<div class="quiz">
+					<fieldset>
+						<input type="radio" name="no2" value="1">목걸이-정환<br>
+						<input type="radio" name="no2" value="2">목도리-선우<br>
+						<input type="radio" name="no2" value="3">장갑-선우<br>
+						<input type="radio" name="no2" value="4">장갑-정환<br>
+						<input type="radio" name="no2" value="5">목도리-택
+					</fieldset>
+				</div>
+
+				<h3>3. 14화에서 정봉이가 미옥이에게 뽀뽀하면서 한 말은 무엇일까요?<br></h3>
+				<img class="image" src="./src/answer_no3.png">
+				<div class="quiz">
+					<fieldset>
+						<input type="radio" name="no3" value="1">확인<br>
+						<input type="radio" name="no3" value="2">췌킹<br>
+						<input type="radio" name="no3" value="3">미옥씨..<br>
+						<input type="radio" name="no3" value="4">사랑해요
+					</fieldset>
+				</div>
+
+				<h3>4. 결국 덕선이의 남편은 누구였을까요?<br></h3>
+				<img class="image" src="./src/answer_no4.png">
+				<div class="quiz">
+					<fieldset>
+						<input type="radio" name="no4" value="1">선우<br>
+						<input type="radio" name="no4" value="2">정환<br>
+						<input type="radio" name="no4" value="3">동룡<br>
+						<input type="radio" name="no4" value="4">택
+					</fieldset>
+				</div>
+
+				<div class="quiz">
+					<h3>남길 말씀</h3><textarea name="comment" rows="8" cols="100"></textarea>
+				</div>
+
+				<hr>
+				<input type="submit" value="제출하기">
+				<input type="reset" value="다시풀기">
+				
+			</form>
+
+		</div>
+	</div>
+
+	<div id="footer">
+		Subin's favorites homepage
+	</div>
+
+</body>
+</html>

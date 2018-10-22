@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&amp;subset=korean" rel="stylesheet">
+	<title>Subin's favorites</title>
+	<style>
+		#header {
+			width: 10%;
+			height: 50px;
+			float: left;
+			background-color: #EAE1D7;
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		.title {
+			font-family: "Nanum Myeongjo", sans-serif;
+			text-decoration: none;
+			color: #585062;
+		}
+
+		#menubar {
+			width: 87%;
+			height: 50px;
+			float: right;
+			background-color: #D8EEE7;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			z-index: -1;
+		}
+
+		.catTable {
+			margin-top: 0px;
+			height: 50px; /*노필요? 보더 제대로 맞춘거임 없으면 천장으로 나옴*/
+		}
+
+		.catElem {
+			float: left; /* 카테고리 가로로 배치 */
+			width: 180px; /* 카테고리, 서브카테고리 너비 고정 */
+			text-align: center;
+			font-family: "Nanum Myeongjo", sans-serif;
+		}
+
+		#menubar ul {
+			list-style: none; /* 리스트 마커 없애줌 */
+			background-color: #D8EEE7;
+			padding: 0px;
+		}
+
+		#menubar li a {
+			color: #585062; /* 카테고리, 서브카테고리 글씨 색깔 */
+			line-height: 50px; /* 카테고리, 서브카테고리 줄간격 */
+			text-decoration: none; /* 카테고리, 서브카테고리 밑줄 없앰 */
+		}
+
+		#menubar li a:hover, #menubar ul li:hover {
+			background-color: #8BD0B4; /* 마우스 올렸을 때 색깔 바꾸기 */
+		}
+
+		.catElem ul {
+			display: none; /* 평소에 서브카테고리 테이블 숨기기 */
+			position: fixed;
+			width: 180px;
+		}
+
+		.catElem:hover ul { 
+			display: block; /* 마우스를 올리면 서브카테고리 테이블 펼치기 */
+		}
+
+		#content {
+			width: 100%;
+			/*높이는 안에있는거 채우는 만큼 알아서 설정되는 듯*/
+			clear: both;
+			font-family: "Nanum Myeongjo", sans-serif;
+		}
+
+		#footer {
+			margin-top: 10px;
+			background-color: #EAE1D7;
+			font-family: "Nanum Myeongjo", sans-serif;
+			text-align: right;
+			padding-right: 20px;
+			color: #585062;
+		}
+
+		.video {
+			margin-left: auto; /* 이미지 중앙 정렬 */
+			margin-right: auto; /* 이미지 중앙 정렬 */
+			display: block; /* 이미지 중앙 정렬 */
+			margin-bottom: 20px;
+		}
+
+		.paragraph {
+			width: 85%;
+			margin: 0 auto; /* div 가운데 정렬 */
+			padding: 20px;
+			line-height: 30px; /* 줄간격 */
+			color: #585062;
+		}
+
+		.actoranim {
+			width: 250px;
+			height: 250px;
+			position: relative;
+			animation: 7s myanim;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes myanim {
+			0%		{top: 0px; left: 10%; background-image: url("./src/abouttimeActors/tim.png"); border-radius: 250px;}
+			16.6%	{top: 0px; left: 30%; background-image: url("./src/abouttimeActors/mary.png"); border-radius: 0px;}
+			33.3%	{top: 0px; left: 50%; background-image: url("./src/abouttimeActors/papa.png"); border-radius: 250px;}
+			49.9%	{top: 0px; left: 70%; background-image: url("./src/abouttimeActors/mama.png"); border-radius: 0px;}
+			66.6%	{top: 0px; left: 50%; background-image: url("./src/abouttimeActors/kitkat.png"); border-radius: 250px;}
+			83.3%	{top: 0px; left: 30%; background-image: url("./src/abouttimeActors/harry.png"); border-radius: 0px;}
+			100%	{top: 0px; left: 10%; background-image: url("./src/abouttimeActors/tim.png"); border-radius: 250px;}
+		}
+
+		.table {
+			border: 1px solid #585062;
+			border-collapse: collapse;
+			margin-left: auto; /* 테이블 가운데 정렬 */
+			margin-right: auto; /* 테이블 가운데 정렬 */
+			margin-bottom: 30px;
+			width: 90%;
+		}
+
+		.table th {
+			background-color: #FFBF89;
+		}
+
+		.table td {
+			border: 1px dotted #585062;
+		}
+
+		.tds {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<a class="title" href="./index.html">Subin's<br>favorites</a>
+	</div>
+	<div id="menubar">
+		<ul class="catTable">
+			<li class="catElem"><a href="./nafla.html">Music</a>
+				<ul>
+					<li><a href="./nafla.html">나플라</a></li>
+					<li><a href="./akmu.html">악동뮤지션</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./abouttime.html">Movie</a>
+				<ul>
+					<li><a href="./abouttime.html">어바웃타임</a></li>
+					<li><a href="./bethere.html">당신, 거기 있어줄래요?</a></li>
+				</ul>
+			</li>
+			<li class="catElem"><a href="./answer1988.html">Drama</a>
+				<ul>
+					<li><a href="./answer1988.html">응답하라 1988</a></li>
+					<li><a href="./youthsage.html">청춘시대</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="content">
+		<iframe class="video" width="60%" height="500" src="https://www.youtube.com/embed/Bt9bZQ1tres" frameborder="0" allowfullscreen></iframe>
+		<h2 style="text-align: center;">
+		<span style="color: #685F74">어 </span>
+		<span style="color: #8BD0B4">바 </span>
+		<span style="color: #DD4B4F">웃  </span>
+		<span style="color: #FFBF89">타 </span>
+		<span style="color: #EAE1D7">임 </span>
+		<span style="color: #585062;">Trailer</span>
+		</h2>	
+
+		<div class="paragraph">
+			<h2 style="color: #FFBF89;">Synopsis</h2>
+			모태솔로 팀(도널 글리슨)은 성인이 된 날, 아버지(빌 나이)로부터 놀랄만한 가문의 비밀을 듣게 된다.<br>
+			바로 <b>시간을 되돌릴 수 있는 능력</b>이 있다는 것! <br>
+			그것이 비록 히틀러를 죽이거나 여신과 뜨거운 사랑을 할 수는 없지만, <br>
+			여자친구는 만들어 줄 순 있으리.. <br><br>
+			꿈을 위해 런던으로 간 팀은 우연히 만난 사랑스러운 여인 메리에게 첫눈에 반하게 된다. <br>
+			그녀의 사랑을 얻기 위해 자신의 특별한 능력을 마음껏 발휘하는 팀. <br>
+			어설픈 대시, 어색한 웃음은 리와인드! 뜨거웠던 밤은 더욱 뜨겁게 리플레이!<br>
+			꿈에 그리던 그녀와 매일매일 최고의 순간을 보낸다. <br><br>
+			하지만 그와 그녀의 사랑이 완벽해질수록 팀을 둘러싼 주변 상황들은 미묘하게 엇갈리고, <br>
+			예상치 못한 사건들이 여기저기 나타나기 시작하는데… <br><br>
+			<b>어떠한 순간을 다시 살게 된다면, 과연 완벽한 사랑을 이룰 수 있을까?</b>
+		</div>
+
+		<div class="paragraph">
+			<h2 style="color: #FFBF89;">Actors</h2>
+			<div class="actoranim"></div>
+			(애니메이션 차례대로)<br>
+			<dl>
+				<dt><b>도널 글리슨</b></dt>
+				<dd><i>주연, 팀 역</i></dd>
+				<dt><b>레이첼 맥아담스</b></dt>
+				<dd><i>주연, 메리 역</i></dd>
+				<dt><b>빌 나이</b></dt>
+				<dd><i>조연, 팀의 아빠 역</i></dd>
+				<dt><b>린제이 던칸</b></dt>
+				<dd><i>조연, 팀의 엄마 역</i></dd>
+				<dt><b>리디아 윌슨</b></dt>
+				<dd><i>조연, 킷캣 역</i></dd>
+				<dt><b>톰 홀랜더</b></dt>
+				<dd><i>조연, 해리 역</i></dd>
+			</dl>
+		</div>
+
+		<div class="paragraph">
+			<h2 style="color: #FFBF89;">Comments</h2>
+			<table class="table">
+				<caption style="font-size: 18pt; text-shadow: 2px 2px #bfb9c6; margin-bottom: 10px;">Best Comments in Watcha Play</caption>
+				<tr>
+					<th>별점</th>
+					<th>리뷰</th>
+					<th>공감</th>
+				</tr>
+				<tr>
+					<td>★★★★★</td>
+					<td class="tds">단순히 로맨틱 코미디를 넘어 무언가 가슴 속에서 올라오는 찡함이 있는 영화. 다시 볼 의사 10000% (ID 강승아)</td>
+					<td>
+						<form style="text-align: center;">
+							<button type="button" onclick="alert('이 리뷰에 공감하셨습니다!')" value="LIKE!"> <img src="./src/hearticon.png" width=25px height=25px></button>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>★★★★★</td>
+					<td class="tds">무엇보다 아버지 역할을 맡은 배우, 빌 나이의 연기를 기록하고 싶다. 나는 깊고 진지한 연기를 통해 영화가 한 단계 더 나은 수준으로 나아갈 수 있었다고 믿는다. (ID 김성호의 씨네만세)</td>
+					<td>
+						<form style="text-align: center;">
+							<button type="button" onclick="alert('이 리뷰에 공감하셨습니다!')" value="LIKE!"> <img src="./src/hearticon.png" width=25px height=25px></button>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>★★★★★</td>
+					<td class="tds">이 영화엔 모든 사랑이 담겨있다. 남녀 간의 사랑, 부자 간의 사랑, 남매 간의 사랑 그리고, 삶에 대한 사랑. 영화 그 자체로 사랑스런 영화! (ID Sohyun Yoon)</td>
+					<td>
+						<form style="text-align: center;">
+							<button type="button" onclick="alert('이 리뷰에 공감하셨습니다!')" value="LIKE!"> <img src="./src/hearticon.png" width=25px height=25px></button>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="footer">
+		Subin's favorites homepage
+	</div>
+
+</body>
+</html>
